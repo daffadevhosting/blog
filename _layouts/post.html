@@ -1,33 +1,24 @@
 ---
 layout: default
 ---
-<article class="post h-entry px-4 py-8 max-w-3xl mx-auto" itemscope itemtype="http://schema.org/BlogPosting">
 
-        <h2 class="mb-4 text-xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors">
-          {{ page.title }}
-        </h2>
-
-      {% if page.image %}
-        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="w-full h-55 rounded-md object-cover">
+<article class="max-w-3xl mx-auto py-16 px-6 sm:px-8 lg:px-0">
+  <header class="mb-8">
+    <h1 class="text-4xl font-bold text-gray-900 dark:text-gray-100 leading-tight">{{ page.title }}</h1>
+    <div class="text-gray-500 dark:text-gray-400 mt-2">
+      Posted on {{ page.date | date: "%B %d, %Y" }}
+      {% if page.author %}
+        by {{ page.author }}
+      {% endif %}
+    </div>
+  </header>
+  
+      {% if post.image %}
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="w-full h-58 mb-4 object-cover">
       {% endif %}
 
-  <div class="post-content e-content prose prose-lg dark:prose-invert" itemprop="articleBody">
+  <div class="prose dark:prose-invert">
     {{ content }}
   </div>
-  
-  <div class="mt-8 pt-4 border-t border-gray-200 dark:border-gray-700 text-sm text-gray-500 dark:text-gray-400">
-    Diposting pada <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
-    {%- if page.author -%}
-      oleh <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-    {%- endif -%}
-    {%- if page.tags and page.tags.size > 0 -%}
-      <br>
-      Kategori:
-      {%- for tag in page.tags -%}
-        <a href="/tags/{{ tag | slugify }}/" class="text-purple-600 dark:text-purple-400 hover:underline">#{{ tag }}</a>{%- unless forloop.last -%},{%- endunless -%}
-      {%- endfor -%}
-    {%- endif -%}
-  </div>
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
