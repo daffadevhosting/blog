@@ -1,5 +1,16 @@
-<footer class="w-full bg-white border-t border-slate-200 dark:bg-slate-900 dark:border-slate-700">
-    <div class="container mx-auto py-5 px-4 text-center text-sm text-slate-500 dark:text-slate-400">
-      <p>&copy; {% capture current_year %}{{ 'now' | date: '%Y' }}{% endcapture %}{{ current_year }} {{ site.title }} <br /> Dibuat dengan <a href="https://jekyll-buildr.vercel.app/" target="_blank"> Jekyll-Buildr</a> by Daffa</p>
-    </div>
-  </footer>
+      <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-400 mb-4">
+                    &copy; {% capture current_year %}{{ 'now' | date: '%Y' }}{% endcapture %}{{ current_year }} {{ site.title }}. All rights reserved.
+                </p>
+                <p class="text-gray-400">
+                    Dibuat dengan <i class="fas fa-heart text-red-500"></i> menggunakan 
+                    <a href="https://jekyll-buildr.vercel.app/" target="_blank"
+                       class="text-purple-400 hover:text-purple-300 underline">
+                        Jekyll-Buildr
+                    </a> by Daffa
+                </p>
+            </div>
+        </div>
+    </footer>
