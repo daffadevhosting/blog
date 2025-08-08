@@ -14,7 +14,7 @@ layout: default
   </header>
   
       {% if page.image %}
-        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="w-full h-58 mb-4 object-cover">
+        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="w-full h-58 mb-4 rounded-md shadow object-cover">
       {% endif %}
 
   <div class="prose dark:prose-invert">
