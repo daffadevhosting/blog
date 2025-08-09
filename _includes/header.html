@@ -11,7 +11,7 @@
                     <div class="ml-10 flex items-baseline space-x-8">
                     {%- for item in site.data.navigation -%}
                         <a href="{{ item.url | relative_url }}" 
-                           class="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">
+                           class="text-gray-700 dark:text-gray-100 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">
                             <i class="fas {{ item.icon }} mr-1"></i>{{ item.title }}
                         </a>
                     {%- endfor -%}
@@ -35,7 +35,7 @@
             <div class="px-2 pt-2 pb-3 space-y-1">
         {%- for item in site.data.navigation -%}
                 <a href="{{ item.url | relative_url }}" 
-                   class="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium">
+                   class="text-gray-700 dark:text-gray-100 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium">
                     <i class="fas {{ item.icon }} mr-2"></i>{{ item.title }}
                 </a>
         {%- endfor -%}
