@@ -26,6 +26,7 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Kecualikan dari pemrosesan.
 # Item berikut tidak akan diproses, secara default.
