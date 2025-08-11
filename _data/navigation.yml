@@ -1,6 +1,4 @@
 - title: Home
-  icon: fa-home
   url: /
 - title: About
-  icon: fa-user
-  url: /about
+  url: /about/
