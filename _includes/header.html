@@ -1,44 +1,13 @@
-<nav class="fixed top-0 w-full z-50 glass-effect" x-data="{ isOpen: false }">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <a href="{{ '/' | relative_url }}" class="text-2xl font-bold gradient-text">
-                        <i class="fas fa-feather-alt mr-2"></i>{{ site.title | escape }}
-                    </a>
-                </div>
-                
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                    {%- for item in site.data.navigation -%}
-                        <a href="{{ item.url | relative_url }}" 
-                           class="text-gray-700 dark:text-gray-100 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">
-                            <i class="fas {{ item.icon }} mr-1"></i>{{ item.title }}
-                        </a>
-                    {%- endfor -%}
-                    </div>
-                </div>
-                
-                <div class="md:hidden">
-                    <button @click="isOpen = !isOpen" 
-                            class="text-gray-700 hover:text-purple-600 p-2 rounded-md">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <div x-show="isOpen" 
-             x-transition:enter="transition ease-out duration-100"
-             x-transition:enter-start="transform opacity-0 scale-95"
-             x-transition:enter-end="transform opacity-100 scale-100"
-             class="md:hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1">
+<header class="bg-white dark:bg-gray-800 shadow-md py-4">
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    <a class="text-2xl font-bold text-gray-900 dark:text-white" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+    
+    <nav class="site-nav">
+      <div class="hidden md:block">
         {%- for item in site.data.navigation -%}
-                <a href="{{ item.url | relative_url }}" 
-                   class="text-gray-700 dark:text-gray-100 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium">
-                    <i class="fas {{ item.icon }} mr-2"></i>{{ item.title }}
-                </a>
+          <a class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md font-medium" href="{{ item.url | relative_url }}">{{ item.title }}</a>
         {%- endfor -%}
-            </div>
-        </div>
-    </nav>
+      </div>
+      </nav>
+  </div>
+</header>
