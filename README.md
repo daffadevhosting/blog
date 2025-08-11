@@ -2,4 +2,4 @@
 Test Studio Jekyll Buildr App
 ---
 
-### git push dari [Jekyll Buildr](https://jekyll-buildr.vercel.app)
+### git commit & push dari [Jekyll Buildr](https://jekyll-buildr.vercel.app)
