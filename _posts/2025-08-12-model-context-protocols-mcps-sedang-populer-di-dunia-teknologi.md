@@ -1,5 +1,5 @@
 ---
-title: "Model Context Protocols (MCPs) Sedang populer di dunia teknologi"
+title: "(MCPs) Sedang populer di dunia teknologi"
 author: "Daffa Aditya"
 date: 2025-08-12T11:30:52.718Z
 categories: Teknologi, AI, Model Bahasa, Konteks, Protokol
