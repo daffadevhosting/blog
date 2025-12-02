@@ -4,21 +4,21 @@ title: Jekyll
 permalink: /
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
   {% for post in site.posts %}
-    <a href="{{ post.url | relative_url }}" class="group block rounded-lg overflow-hidden bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-slate-800">
+    <a href="{{ post.url | relative_url }}" class="group block rounded-lg overflow-hidden bg-white shadow-md hover:shadow-lg transition-shadow duration-300 dark:bg-slate-800">
       
       {% if post.image %}
         <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="w-full h-48 object-cover">
       {% endif %}
 
-      <div class="p-6">
-        <h2 class="mb-2 text-xl font-bold tracking-tight text-slate-900 group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400 transition-colors">
+      <div class="p-4">
+        <h2 class="mb-2 text-xl font-semibold tracking-tight text-slate-900 group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400 transition-colors">
           {{ post.title }}
         </h2>
         
-        <p class="font-normal text-slate-600 dark:text-slate-400 mb-4">
+        <p class="font-normal text-slate-600 dark:text-slate-400 mb-3">
           {{ post.excerpt | strip_html | truncatewords: 20 }}
         </p>
 
